@@ -6,23 +6,8 @@ var drinksDiv = document.getElementById("drinks-div");
 var imageDiv = document.getElementById("image-div");
 
 fetch("https://www.thecocktaildb.com/api/json/v1/1/random.php")
-  .then((response) => response.json())
-  .then((data) => getRandomCocktail(data));
-
-var granimInstance = new Granim({
-  element: "#canvas-basic",
-  direction: "left-right",
-  isPausedWhenNotInView: true,
-  states: {
-    "default-state": {
-      gradients: [
-        ["#ff9966", "#ff5e62"],
-        ["#00F260", "#0575E6"],
-        ["#e1eec3", "#f05053"],
-      ],
-    },
-  },
-});
+    .then((response) => response.json())
+    .then((data) => getRandomCocktail(data));
 
 // Helper Functions
 function getRandomCocktail(data) {
@@ -61,30 +46,7 @@ function getRandomCocktail(data) {
             drinksDiv.appendChild(ingredientsUL);
         }
     }
-
-    drinkElement.textContent = drink.strDrink;
-    drinksDiv.appendChild(drinkElement);
-
-    var ingredientsUL = document.createElement("ul");
-    for (var i = 1; i <= 15; i++) {
-      var line = "";
-      var ingredientName = drink[`strIngredient${i}`];
-      // console log of ingredients working
-      console.log(ingredientName);
-      if (
-        drink[`strIngredient${i}`] !== null &&
-        drink[`strIngredient${i}`] !== ""
-      ) {
-        line += drink[`strIngredient${i}`];
-        var lineElement = document.createElement("li");
-        line += " " + drink[`strMeasure${i}`];
-        lineElement.textContent = line;
-        ingredientsUL.appendChild(lineElement);
-      }
-      drinksDiv.appendChild(ingredientsUL);
-    }
-  }
-}
+};
 
 // function logKey(e) {
 //     console.log(e);
@@ -100,13 +62,11 @@ function getCocktailApi(e) {
     e.preventDefault();
     console.log(inputField.value);
 
-  fetch(cocktailSearch, {
-    // mode cors allows cross origin requests
-    mode: "cors",
-  })
-    .then(function (response) {
-      console.log(response);
-      return response.json();
+    var cocktailSearch = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + inputField.value;
+
+    fetch(cocktailSearch, {
+        // mode cors allows cross origin requests
+        mode: "cors",
     })
         .then(function (response) {
             console.log(response);
@@ -204,22 +164,26 @@ searchForm.addEventListener("submit", (e) => {
 
 //Bulma Javascript for Hamburger menu
 document.addEventListener("DOMContentLoaded", () => {
-  // Get all "navbar-burger" elements
-  const $navbarBurgers = Array.prototype.slice.call(
-    document.querySelectorAll(".navbar-burger"),
-    0
-  );
+    // Get all "navbar-burger" elements
+    const $navbarBurgers = Array.prototype.slice.call(
+        document.querySelectorAll(".navbar-burger"),
+        0
+    );
 
-  // Add a click event on each of them
-  $navbarBurgers.forEach((el) => {
-    el.addEventListener("click", () => {
-      // Get the target from the "data-target" attribute
-      const target = el.dataset.target;
-      const $target = document.getElementById(target);
+    // Add a click event on each of them
+    $navbarBurgers.forEach((el) => {
+        el.addEventListener("click", () => {
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
 
-      // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
-      el.classList.toggle("is-active");
-      $target.classList.toggle("is-active");
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle("is-active");
+            $target.classList.toggle("is-active");
+        });
     });
-  });
 });
+
+
+
+
