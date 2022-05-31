@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Drink of the Day</title>
+      <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css"/>
+      <link rel="stylesheet" href="assets/mybulma/sass/mystyles.css">
+      <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+      <script src="https://kit.fontawesome.com/8cd90df22b.js" crossorigin="anonymous"></script>
+   
+  </head>
+  <body>
+     <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="./index.html">
+        <img src="./assets/images/icons8-cocktail-shaker-50.png" style: height="100px">
+      </a>
+  
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-item" id="randomCocktail" href="./main.html">
+            Random Cocktail
+          </a>
+          <a class="navbar-link">
+            More
+          </a>
+  
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="./main.html">
+              Cocktail of the Day
+            </a>
+            <a class="navbar-item" href="./cocktail-result.html" >
+              Cocktail Result
+            </a>
+            <!--place holder for future development-->
+            <a class="navbar-item" href="#">
+              Library
+            </a>
+          </div>
+        </div>
+      </div>
+  
+  </nav>
+      
+    
+    <section class="section is-small">
+      <h1 class="title is-1 is-centered has-text-weight-light has-text-warning-light">Drink of the Day</h1>
+    </section>
+
+    <section>
+    <div class="columns is-mobile is-justify-content-center is-flex-shrink-1 is-align-content-space-evenly is-mobile is-flex-wrap">
+      <div class="column is-centered is-3 m-3">
+        <figure class="image  m-4 is-480x480">
+          <img  class= is-rounded  src="./assets/images/espresso.jpg" alt="Aperol drink in a glass" />
+        </figure>
+        <p class="text1  is-centered">Espresso Martini</p>
+        <p class="text p-2">The espresso martini is a cold caffeinated alcoholic drink made with espresso, coffee liqueur, and vodka. It is not a true martini as it contains neither gin nor vermouth, but is one of many drinks that incorporate the term martini into their names. </p>
+      </div>
+
+      <div class="column is-centered is-4 m-3">
+        <div class="content">
+          <div class="content">
+            <h1 class="title is-centered">Ingridients</h1>
+            <div class="content is-centered">
+              <!-- bulma allows text to be centered without need of going into css -->
+              <li class="has-text-centered">2 ounces vodka </li>
+              <li class="has-text-centered">1/2 ounce coffee liqueur </li>
+              <li class="has-text-centered">1 ounce espresso, freshly brewed (or cold brew concentrate)</li>
+              <li class="has-text-centered">1/2 ounce simple syrup</li>
+              <li class="has-text-centered">Garnish: coffee beans</li>
+            </div>
+          </div>
+        </div>
+          
+      </div>
+    </section>
+
+
+    <footer class="is-ancestor p-5">
+        <!-- for colums you can add an offset to move the colum as many spaces as you want from 1 - 12 -->
+        <div class="column is-8 is-offset-2">
+          <!-- this P allows the icon to be alligned to the left and within the search bar -->
+          <p class="control has-icons-left">
+            <input
+              id="search"
+              class="input has-icon-left is-rounded is-focused"
+              type="text"
+              placeholder="Search for a drink here"
+            />
+            <span class="icon is-small is-left">
+              <!-- calls in icon from font awsome -->
+              <i class="fa-solid fa-martini-glass"></i>
+            </span>
+          </p>
+        </div>
+    </footer>
+
+    <script src="https://apis.google.com/js/api.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

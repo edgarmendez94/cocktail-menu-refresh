@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="assets/mybulma/sass/mystyles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+    <!-- https://fontawesome.com/ -->
+    <script src="https://kit.fontawesome.com/8cd90df22b.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+
+<script type = "text/javascript" src="assets/js/script.js"></script>
+
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="./index.html">
+        <img src="./assets/images/icons8-cocktail-shaker-50.png" style: height="100px">
+      </a>
+  
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+
+  
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-item" id="randomCocktail" href="./main.html">
+            Random Cocktail
+          </a>
+          <a class="navbar-link">
+            More
+          </a>
+  
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="./main.html">
+              Cocktail of the Day
+            </a>
+            <a class="navbar-item" href="./cocktail-result.html" >
+              Cocktail Result
+            </a>
+            <!--place holder for future development-->
+            <a class="navbar-item" href="#">
+              Library
+            </a>
+          </div>
+        </div>
+      </div>
+  
+  </nav>
+
+      <section class="section is-small">
+        <h1 class="title is-1 is-centered has-text-weight-light has-text-warning-light">Our Team's Top 5 Cocktails</h1>
+      </section>
+
+      <section>
+
+    
+        <div class="columns is-mobile is-justify-content-center is-flex-shrink-1 is-align-content-space-evenly is-mobile is-flex-wrap">
+          <div class="column is-centered is-2 m-3">
+            <figure class="image is-square m-4">
+              <img  class= is-rounded  src="./assets/images/aperol.jpg" alt="Aperol drink in a glass" />
+            </figure>
+            <p class="text1  is-centered">Aperol Spritz</p>
+            <p class="text ">A Spritz Veneziano is an Italian wine-based cocktail, commonly served as an aperitif in Northeast Italy. </p>
+          </div>
+        
+          <div class="column is-centered is-2 p-2 m-3">
+            <figure class="image is-square m-4">
+              <img  class= is-rounded  src="./assets/images/vodka.jpg" alt="Aperol drink in a glass" />
+            </figure>
+            <p class="text1  is-centered">Vodka martini</p>
+            <p class="text "> Also known as a vodkatini or kangaroo cocktail, is a cocktail made with vodka and vermouth, a variation of a martini. </p>
+          </div>
+        
+            <div class="column is-centered is-2 p-2 m-3">
+              <figure class="image is-square m-4">
+                <img  class= is-rounded  src="./assets/images/cosmo.jpg" alt="Aperol drink in a glass" />
+              </figure>
+              <p class="text1  is-centered">Cosmopolitan</p>
+              <p class="text ">Is a cocktail made with vodka, triple sec, cranberry juice, and freshly squeezed or sweetened lime juice. </p>
+            </div>
+        
+          <div class="column is-centered is-2 p-2 m-3">
+            <figure class="image is-square m-4">
+              <img  class= is-rounded  src="./assets/images/manhattan.jpg" alt="Aperol drink in a glass" />
+            </figure>
+            <p class="text1  is-centered">Manhattan</p>
+            <p class="text ">A Manhattan is a cocktail made with whiskey, sweet vermouth, and bitters. </p>
+          </div>
+    
+            <div class="column is-centered is-2 p-2 m-3">
+              <figure class="image is-square m-4">
+                <img  class= is-rounded  src="./assets/images/bloody.jpg" alt="Aperol drink in a glass" />
+              </figure>
+              <p class="text1  is-centered">Bloody Mary</p>
+              <p class="text ">A Bloody Mary is a cocktail containing vodka, tomato juice, and other spices and flavorings.  </p>
+            </div>
+            </div>
+
+      <footer class="is-ancestor p-5">
+        <!-- for colums you can add an offset to move the colum as many spaces as you want from 1 - 12 -->
+        <div class="column is-8 is-offset-2 ">
+          <!-- this P allows the icon to be alligned to the left and within the search bar -->
+          <p class="control has-icons-left">
+            <input
+              id="search"
+              class="input has-icon-left is-rounded is-focused"
+              type="text"
+              placeholder="Search for a drink here"
+            />
+            <span class="icon is-small is-left">
+              <!-- calls in icon from font awsome -->
+              <i class="fa-solid fa-martini-glass"></i>
+            </span>
+          </p>
+        </div>
+      </footer>
+  
+      <script src="https://apis.google.com/js/api.js"></script>
+      
+</body>
+
+</html>
