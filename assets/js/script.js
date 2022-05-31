@@ -26,26 +26,6 @@ var granimInstance = new Granim({
 
 // Helper Functions
 function getRandomCocktail(data) {
-<<<<<<< HEAD
-  var drinksDiv = document.getElementById("drinks-div");
-  var imageDiv = document.getElementById("image-div");
-
-  for (let drink of data.drinks) {
-    var drinkElement = document.createElement("h3");
-
-    if (drink.strImageSource !== null) {
-      var drinkImage = document.createElement("img");
-      drinkImage.setAttribute("src", drink.strImageSource);
-      drinkImage.src = drink.strImageSource;
-      imageDiv.appendChild(drinkImage);
-    } else {
-      var placeholderDrink = document.createElement("img");
-      placeholderDrink.setAttribute(
-        "src",
-        "assets/images/bartender-placeholder.jpeg"
-      );
-      imageDiv.appendChild(placeholderDrink);
-=======
 
 
     for (let drink of data.drinks) {
@@ -80,7 +60,6 @@ function getRandomCocktail(data) {
             }
             drinksDiv.appendChild(ingredientsUL);
         }
->>>>>>> 054c663e91135c9eb16443fb67aadfb4044a7dc8
     }
 
     drinkElement.textContent = drink.strDrink;
@@ -117,18 +96,9 @@ function getRandomCocktail(data) {
 
 // }
 
-<<<<<<< HEAD
-function getCocktailApi() {
-  console.log(inputField.value);
-
-  var cocktailSearch =
-    "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" +
-    inputField.value;
-=======
 function getCocktailApi(e) {
     e.preventDefault();
     console.log(inputField.value);
->>>>>>> 054c663e91135c9eb16443fb67aadfb4044a7dc8
 
   fetch(cocktailSearch, {
     // mode cors allows cross origin requests
@@ -138,11 +108,6 @@ function getCocktailApi(e) {
       console.log(response);
       return response.json();
     })
-<<<<<<< HEAD
-    .then(function (data) {
-      console.log(data);
-    });
-=======
         .then(function (response) {
             console.log(response);
             return response.json();
@@ -155,7 +120,6 @@ function getCocktailApi(e) {
             localStorage.setItem('cocktailData', JSON.stringify(cocktailData));
         });
 
->>>>>>> 054c663e91135c9eb16443fb67aadfb4044a7dc8
 }
 
 // function authenticate() {
@@ -210,20 +174,6 @@ function getCocktailApi(e) {
 // });
 
 function googleFetch() {
-<<<<<<< HEAD
-  var googleVid =
-    "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=" +
-    inputField.value +
-    "&type=video&key=AIzaSyCdDdBtp_6yVMIy_8Wx1XJHcQ4FZRPJ3rs";
-  fetch(googleVid)
-    .then(function (response) {
-      console.log(response.status);
-      return response.json();
-    })
-    .then(function (data) {
-      console.log(data);
-    });
-=======
     var googleVid = "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=" + inputField.value + "&type=video&key=AIzaSyCTGqFnZNElv_dPPcCH13dgc-tQAnu7kE0"
     fetch(googleVid)
         .then(
@@ -237,7 +187,6 @@ function googleFetch() {
 
             console.log(data);
         });
->>>>>>> 054c663e91135c9eb16443fb67aadfb4044a7dc8
 }
 
 // googleFetch();
